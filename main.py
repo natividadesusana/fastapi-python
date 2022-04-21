@@ -14,4 +14,10 @@ class User(BaseModel):
     email: str
     password: str
 
+# criando banco de dados
+data_base = [
+    User(id=1, email='crodovaldo@crodovaldo.com.br', password='crodovaldo123'),
+    User(id=2, email='cleonilde@cleonilde.com.br', password='cleonilde123')
+]
+
 
