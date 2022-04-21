@@ -3,7 +3,15 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
-# Rota Raiz
+# criando rota raiz
 @app.get('/')
 def root():
     return {'Hello': 'World'}
+
+# criando modelo
+class User(BaseModel):
+    id: int
+    email: str
+    password: str
+
+
