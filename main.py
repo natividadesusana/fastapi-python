@@ -33,3 +33,9 @@ def get_user_using_id(id_user: int):
             return user
     
     return{'Status': 404, 'Message': 'User not found!'}
+
+# criando rota insere usuario
+@app.post('/users')
+def insert_user(user: User):
+    data_base.append(user)
+    return user
