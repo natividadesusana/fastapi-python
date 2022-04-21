@@ -24,3 +24,12 @@ data_base = [
 @app.get('/users')
 def get_all_users():
     return data_base
+
+# criando rota get id
+@app.get('/users/{id_user}')
+def get_user_using_id(id_user: int):
+    for user in data_base:
+        if(user.id == id_user):
+            return user
+    
+    return{'Status': 404, 'Message': 'User not found!'}
