@@ -20,4 +20,7 @@ data_base = [
     User(id=2, email='cleonilde@cleonilde.com.br', password='cleonilde123')
 ]
 
-
+# criando rota get all
+@app.get('/users')
+def get_all_users():
+    return data_base
